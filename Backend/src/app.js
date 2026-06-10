@@ -12,7 +12,7 @@ const app=express()
 
 app.use(cors({
     // origin: 'http://localhost:5173',
-    origin: 'https://hirezy-three.versal.app',
+    origin: 'https://hirezy-three.vercel.app',
     credentials: true
 }))
 app.use(express.json())

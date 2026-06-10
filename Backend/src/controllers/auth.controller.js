@@ -96,16 +96,22 @@ export const login = async (req, res) => {
             { expiresIn: "1d" }
         );
 
+        res.cookie('token',token,{
+            httpOnly: true,
+            secure: false,
+            sameSite: "Lax",
+            maxAge: 24* 60* 60* 1000
+        })
+
         return res.status(200).json({
-            message: "User logged in successfully",
-            token,
+            message: "User Logged in successfully",
             user: {
                 id: user.id,
                 name: user.name,
                 email: user.email,
                 role: user.role
             }
-        });
+        })
 
     } catch (err) {
         console.error("Login error:", err.message);
@@ -118,6 +124,7 @@ export const login = async (req, res) => {
 
 export const logout=(req,res)=>{
     try{
+        res.clearCookie('token');
         res.status(200).send({
             message: 'logout successfully'
         })
@@ -127,4 +134,12 @@ export const logout=(req,res)=>{
             message: "internal error"
         })
     }
+}
+
+
+
+export const verifyToken=(req,res)=>{
+    return res.status(200).json({
+        user: req.user
+    })
 }

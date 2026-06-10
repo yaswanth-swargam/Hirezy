@@ -40,3 +40,5 @@ ETL/jobenv/
 # Python cache
 __pycache__/
 *.pyc
+
+.env

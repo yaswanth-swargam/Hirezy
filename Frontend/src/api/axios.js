@@ -1,16 +1,8 @@
 import axios from "axios";
-import store from "../store/store";
 
 const api = axios.create({
-  baseURL: "/api"
-});
-
-api.interceptors.request.use((config) => {
-  const token = store.getState().auth.token;
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
+  baseURL: "http://localhost:3000/api",
+  withCredentials: true  // sends cookie automatically with every request
 });
 
 export default api;

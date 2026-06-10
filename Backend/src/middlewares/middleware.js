@@ -2,15 +2,13 @@ import jwt from "jsonwebtoken";
 
 const auth = (req, res, next) => {
     try {
-        const authHeader = req.headers.authorization;
+        const token=  req.cookies.token;
 
-        if (!authHeader || !authHeader.startsWith("Bearer ")) {
+        if(!token){
             return res.status(401).json({
-                message: "Unauthorized: Token missing"
-            });
+                message: "Unothorised : token missing"
+            })
         }
-
-        const token = authHeader.split(" ")[1];
 
         const payload = jwt.verify(token, process.env.JWT_SECRET_KEY);
 

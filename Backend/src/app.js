@@ -11,7 +11,8 @@ import savedJobRoutes from './routes/savedJobs.routes.js'
 const app=express()
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    // origin: 'http://localhost:5173',
+    origin: 'https://hirezy-three.versal.app',
     credentials: true
 }))
 app.use(express.json())

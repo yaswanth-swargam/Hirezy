@@ -3,6 +3,7 @@ import {loginUser} from '../store/authActons'
 import {useSelector,useDispatch} from 'react-redux'
 import {useNavigate,Link} from 'react-router-dom'
 import Button from './Button'
+import Logo from '../assets/logo.png'
 
 export default function LoginCard() {
   const dispatch=useDispatch()
@@ -25,6 +26,7 @@ export default function LoginCard() {
 return(
     <div className='rounded-lg bg-white shadow-xl w-full max-w-md p-4'>
         <form onSubmit={signUpSubmit} className='flex flex-col gap-4'>
+            <img src={Logo} alt="Hirezy" className="h-10 w-auto" />
             <h1 className='text-bold text-center text-2xl'>Login Account</h1>
             {resMessage && <p className="text-red-400">{resMessage}</p>}
             {loading && <p className="text-gray-500">Logging in...</p>}

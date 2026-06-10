@@ -2,6 +2,7 @@ import { useState } from 'react'
 import api from '../api/axios'
 import { Link, useNavigate } from 'react-router-dom'
 import Button from './Button'
+import Logo from '../assets/logo.png'
 
 export default function SignUpCard() {
   const navigate = useNavigate()
@@ -30,6 +31,7 @@ export default function SignUpCard() {
   return (
     <div className='rounded-lg bg-white shadow-xl w-full max-w-md p-4'>
       <form onSubmit={signUpSubmit} className='flex flex-col gap-4'>
+        <img src={Logo} alt="Hirezy" className="h-10 w-auto" />
         <h1 className='text-bold text-center text-2xl'>Create Account</h1>
         {resMessage && <p className='text-red-400'>{resMessage}</p>}
         <input type="text" placeholder='Name' onChange={(e) => setName(e.target.value)} className='rounded-md text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-950 px-2 py-2' />

@@ -26,8 +26,10 @@ export default function LoginCard() {
 return(
     <div className='rounded-lg bg-white shadow-xl w-full max-w-md p-4'>
         <form onSubmit={signUpSubmit} className='flex flex-col gap-4'>
-            <img src={Logo} alt="Hirezy" className="h-10 w-auto" />
-            <h1 className='text-bold text-center text-2xl'>Login Account</h1>
+            <div className='flex flex-col items-center gap-2 mb-2'>
+          <img src={Logo} alt="Hirezy" className="h-14 w-14 object-contain" />
+          <h1 className='text-2xl font-semibold text-gray-800'>Login</h1>
+        </div>
             {resMessage && <p className="text-red-400">{resMessage}</p>}
             {loading && <p className="text-gray-500">Logging in...</p>}
             <input type="email" placeholder='Email' onChange={(e)=>setEmail(e.target.value)} className='rounded-md text-gray-500 focus:outline-none focus:ring-2 focus:ring-red-950 px-2 py-2' />

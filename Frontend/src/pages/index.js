@@ -5,3 +5,4 @@ import SignUp from './SignUp.jsx'
 export{
     Jobs,Login,SignUp
 }
+export { default as Profile } from './Profile.jsx'

@@ -25,6 +25,7 @@ export default function MenuComp(){
         ">
             <Link to='/' className="text-slate-700 hover:text-sky-700">Home</Link>
             <Link to='/saved' className="text-slate-700 hover:text-sky-700">Saved</Link>
+            <Link to='/profile' className="text-slate-700 hover:text-sky-700">Profile</Link>
             <Button onClick={handleLogout}>
                 <RiLogoutCircleRLine />
             </Button>

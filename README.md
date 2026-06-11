@@ -8,13 +8,10 @@ A job portal that scrapes real listings from LinkedIn and Indeed, matches them t
 
 ## Screenshots
 
-| Login | Jobs |
-|---|---|
-| ![Login](./screenshots/login.png) | ![Jobs](./screenshots/jobs.png) |
-
-| Saved Jobs | Profile |
-|---|---|
-| ![Saved](./screenshots/saved.png) | ![Profile](./screenshots/profile.png) |
+![Login](./Frontend/screenshots/login.png)
+![Jobs](./Frontend/screenshots/jobs.png)
+![Saved](./Frontend/screenshots/saved.png)
+![Profile](./Frontend/screenshots/profile.png)
 
 ---
 
@@ -159,4 +156,4 @@ Total: 20 tests — all passing
 **Yaswanth Swargam**
 B.Tech CSE — RGUKT Ongole (2027)
 
-[LinkedIn](https://www.linkedin.com/in/yaswanthswargam/) · [GitHub](https://github.com/yaswanth-swargam)
+[LinkedIn](https://www.linkedin.com/in/yaswanth-swargam/) · [GitHub](https://github.com/yaswanth-swargam/)

@@ -16,22 +16,24 @@ export default function Profile() {
     const [loading, setLoading] = useState(false)
 
     const handleUpdate = async (e) => {
-        e.preventDefault()
-        setLoading(true)
-        setMessage('')
-        try {
-            const res = await api.put('/users/update-role', { role })
-            // update redux state with new role
-            dispatch(login({
-                user: { ...userData, role }
-            }))
-            setMessage('Role updated successfully')
-        } catch (e) {
-            setMessage('Failed to update role')
-        } finally {
-            setLoading(false)
-        }
+    e.preventDefault()
+    setLoading(true)
+    setMessage('')
+    try {
+        await api.put('/users/update-role', { role })
+        
+        // update Redux with new role
+        dispatch(login({
+            user: { ...userData, role }
+        }))
+        
+        setMessage('Role updated successfully ✓')
+    } catch (e) {
+        setMessage('Failed to update role')
+    } finally {
+        setLoading(false)
     }
+}
 
     return (
         <div className='flex items-center justify-center h-screen bg-gradient-to-br from-blue-100 via-blue-50 to-blue-200'>

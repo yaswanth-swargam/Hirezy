@@ -22,7 +22,7 @@ export default function Navbar() {
     }
 
     return (
-        <div className="relative px-6 py-4 border-b border-gray-200 bg-white shadow-sm">
+        <div className="relative px-6 py-4 border-b border-white/40">
 
             <div className="flex items-center justify-between">
 

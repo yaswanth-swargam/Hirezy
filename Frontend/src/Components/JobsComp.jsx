@@ -31,7 +31,7 @@ function JobComp() {
     };
 
     fetchJobs();
-  }, []);
+  }, [userData.role]);
 
 
   const handleSearch=(e)=>{

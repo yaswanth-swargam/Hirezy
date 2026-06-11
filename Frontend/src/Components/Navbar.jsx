@@ -22,8 +22,8 @@ export default function Navbar() {
     }
 
     return (
-        <div className="relative px-6 py-4 border-b border-white/40">
-
+    <div className="relative border-b border-white/40">
+        <div className="mx-auto max-w-6xl px-4 py-4">
             <div className="flex items-center justify-between">
 
                 {/* Left — Logo */}
@@ -34,7 +34,7 @@ export default function Navbar() {
                     </span>
                 </Link>
 
-                {/* Right — Desktop Menu (always visible on md+) */}
+                {/* Right — Desktop Menu */}
                 <div className="hidden md:flex">
                     <MenuComp />
                 </div>
@@ -51,13 +51,13 @@ export default function Navbar() {
 
             </div>
 
-            {/* Mobile Dropdown Menu */}
+            {/* Mobile Dropdown */}
             {menu && (
-                <div className="md:hidden mt-3 pb-3 border-t border-gray-100">
+                <div className="md:hidden mt-3 pb-3 border-t border-white/40">
                     <MenuComp />
                 </div>
             )}
-
         </div>
-    )
+    </div>
+)
 }

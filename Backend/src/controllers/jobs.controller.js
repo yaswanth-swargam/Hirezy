@@ -46,7 +46,7 @@ export const jobs = async (req, res) => {
         const role = userRows[0].role
 
         const [rows] = await pool.query(
-            `SELECT * FROM jobs WHERE title LIKE ?`,
+            `SELECT * FROM jobs WHERE title LIKE ? ORDER BY date_posted DESC`,
             [`%${role}%`]
         )
 
